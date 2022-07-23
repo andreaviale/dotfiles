@@ -1,0 +1,11 @@
+#!/bin/sh
+# $Id: pdf2eps,v 0.01 2005/10/28 00:55:46 Herbert Voss Exp $
+# Convert PDF to encapsulated PostScript.
+# usage:
+# pdf2eps <page number> <pdf file without ext>
+
+#pdfcrop $2.pdf
+pdf-crop-margins -v -p 0 -a -6 $2.pdf
+pdftops -f $1 -l $1 -eps "$2_cropped.pdf"
+rm  "$2_cropped.pdf"
+mv  "$2_cropped.eps" $2.eps
