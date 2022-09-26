@@ -18,6 +18,9 @@ git config --global user.name "andreaviale"
 echo -e "\e[1;31m Swap Esc and CapsLock \e[0m"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 
+echo -e "\e[1;31m Remove home folder from desktop \e[0m"
+gsettings set org.gnome.shell.extensions.ding show-home false
+
 echo -e "\e[1;31m Setup Vundle and vimrc \e[0m"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s .vimrc ~/
@@ -101,6 +104,7 @@ curl https://rclone.org/install.sh | sudo bash
 
 echo -e "\e[1;31m Installing snaps \e[0m"
 snap install skype
+snap install joplin-desktop
 
 
 sudo apt update
