@@ -1,11 +1,11 @@
+# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 export PATH="$HOME/.local/bin:$PATH"
-
-
+export RASPBERRY=192.168.0.101
 # path to  relevant folders
 #export BIB=$HOME/onedrive/References/library.bib
 #export PAPER=$HOME/onedrive/my_papers/attitude_control_comparison
@@ -49,6 +49,8 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode)
 
 # Fix Matlab graphics issue
 export MESA_LOADER_DRIVER_OVERRIDE=i965
+
+export ECHOSHOWMAC=74:E2:0C:D1:EE:D4
 
 source $ZSH/oh-my-zsh.sh
 # ALIASES:
